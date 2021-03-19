@@ -29,7 +29,8 @@ class ImportCategoryUseCase {
             description,
           });
         })
-        .on('end', () => {
+        .on('end', async () => {
+          await fs.promises.unlink(file.path);
           resolve(categories);
         })
         .on('error', err => {
