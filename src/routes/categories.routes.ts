@@ -1,10 +1,10 @@
 import { Request, Response, Router } from 'express';
 
-import { CategoriesRepository } from '../repositories/categories.repository';
+import { PostgresCategoriesRepository } from '../repositories/PostgresCategories.repository';
 import { CreateCategoryService } from '../services/createCategory.service';
 
 const categoriesRoutes = Router();
-const categoriesRepository = new CategoriesRepository();
+const categoriesRepository = new PostgresCategoriesRepository();
 
 categoriesRoutes.post('/', (request: Request, response: Response) => {
   const { name, description } = request.body;
