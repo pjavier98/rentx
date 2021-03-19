@@ -2,7 +2,7 @@ import { CategoriesRepository } from '../../repositories/categories.repository';
 import { FindAllCategoriesController } from './findAllCategories.controller';
 import { FindAllCategoriesUseCase } from './findAllCategories.useCase';
 
-const categoriesRepository = new CategoriesRepository();
+const categoriesRepository = CategoriesRepository.getInstance();
 
 const findAllCategoriesUseCase = new FindAllCategoriesUseCase(
   categoriesRepository,
