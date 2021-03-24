@@ -5,8 +5,8 @@ import { FindAllCategoriesUseCase } from './findAllCategories.useCase';
 class FindAllCategoriesController {
   constructor(private findAllCategoriesUseCase: FindAllCategoriesUseCase) {}
 
-  handle(request: Request, response: Response): Response {
-    const categories = this.findAllCategoriesUseCase.execute();
+  async handle(request: Request, response: Response): Promise<Response> {
+    const categories = await this.findAllCategoriesUseCase.execute();
 
     return response.json(categories);
   }

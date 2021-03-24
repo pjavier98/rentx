@@ -2,14 +2,12 @@ import { CategoriesRepository } from '../../repositories/implementations/categor
 import { FindAllCategoriesController } from './findAllCategories.controller';
 import { FindAllCategoriesUseCase } from './findAllCategories.useCase';
 
-const categoriesRepository = CategoriesRepository.getInstance();
+export default (): FindAllCategoriesController => {
+  const categoriesRepository = new CategoriesRepository();
 
-const findAllCategoriesUseCase = new FindAllCategoriesUseCase(
-  categoriesRepository,
-);
+  const findAllCategoriesUseCase = new FindAllCategoriesUseCase(
+    categoriesRepository,
+  );
 
-const findAllCategoriesController = new FindAllCategoriesController(
-  findAllCategoriesUseCase,
-);
-
-export { findAllCategoriesController };
+  return new FindAllCategoriesController(findAllCategoriesUseCase);
+};

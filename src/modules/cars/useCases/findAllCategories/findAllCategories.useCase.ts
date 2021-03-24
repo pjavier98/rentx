@@ -1,10 +1,10 @@
-import { Category } from '../../entities/category.model';
+import { Category } from '../../entities/category.entity';
 import { ICategoriesRepository } from '../../repositories/interfaces/ICategories.repository';
 
 class FindAllCategoriesUseCase {
   constructor(private categoriesRepository: ICategoriesRepository) {}
 
-  execute(): Category[] {
+  execute(): Promise<Category[]> {
     return this.categoriesRepository.findAll();
   }
 }
