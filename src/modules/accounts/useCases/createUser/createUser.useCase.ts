@@ -1,8 +1,8 @@
 import { hash } from 'bcryptjs';
 import { inject, injectable } from 'tsyringe';
 
-import { ICreateUserDTO } from '../dtos/ICreateUser.dto';
-import { IUsersRepository } from '../repositories/interfaces/IUsers.repository';
+import { ICreateUserDTO } from '../../dtos/ICreateUser.dto';
+import { IUsersRepository } from '../../repositories/interfaces/IUsers.repository';
 
 @injectable()
 class CreateUserUseCase {
