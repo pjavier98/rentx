@@ -1,4 +1,3 @@
-import { Category } from 'modules/cars/infra/typeorm/entities/category.entity';
 import {
   Column,
   CreateDateColumn,
@@ -8,6 +7,8 @@ import {
   PrimaryColumn,
 } from 'typeorm';
 import { v4 as uuidV4 } from 'uuid';
+
+import { Category } from './category.entity';
 
 @Entity('cars')
 class Car {
