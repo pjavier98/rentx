@@ -11,17 +11,8 @@
       "configs/*": [
         "configs/*"
       ],
-      "errors/*": [
-        "errors/*"
-      ],
-      "middlewares/*": [
-        "middlewares/*"
-      ],
       "modules/*": [
         "modules/*"
-      ],
-      "routes/*": [
-        "routes/*"
       ],
       "shared/*": [
         "shared/*"
