@@ -1,6 +1,7 @@
 import { ICreateCarsDto } from 'modules/cars/dtos/ICreateCars.dto';
 import { IFindAllCarsDto } from 'modules/cars/dtos/IFindAllCars.dto';
 import { Car } from 'modules/cars/infra/typeorm/entities/car.entity';
+import { Specification } from 'modules/cars/infra/typeorm/entities/specification.entity';
 import { ICarsRepository } from 'modules/cars/repositories/interfaces/ICars.repository';
 
 class CarsRepositoryInMemory implements ICarsRepository {
