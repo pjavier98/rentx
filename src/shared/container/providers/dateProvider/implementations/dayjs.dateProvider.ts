@@ -4,7 +4,7 @@ import { IDateProvider } from 'shared/container/providers/dateProvider/IDate.pro
 
 dayjs.extend(utc);
 
-class DayjsDateProvider implements IDateProvider {
+class DayJSDateProvider implements IDateProvider {
   dateNow(): Date {
     return dayjs().toDate();
   }
@@ -21,4 +21,4 @@ class DayjsDateProvider implements IDateProvider {
   }
 }
 
-export { DayjsDateProvider };
+export { DayJSDateProvider };

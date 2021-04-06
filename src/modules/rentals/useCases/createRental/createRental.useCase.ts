@@ -3,10 +3,15 @@ import { Rental } from 'modules/rentals/infra/typeorm/entities/rental.entity';
 import { IRentalsRepository } from 'modules/rentals/repositories/interfaces/IRentals.repository';
 import { IDateProvider } from 'shared/container/providers/dateProvider/IDate.provider';
 import { AppError } from 'shared/errors/app.error';
+import { inject, injectable } from 'tsyringe';
 
+@injectable()
 class CreateRentalUseCase {
   constructor(
+    @inject('RentalsRepository')
     private rentalsRepository: IRentalsRepository,
+
+    @inject('DateProvider')
     private dateProvider: IDateProvider,
   ) {}
 
